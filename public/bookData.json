@@ -1,0 +1,81 @@
+[
+    {
+      "id": 1,
+      "Name": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/NKz5rCK/B1.png",
+      "review": "A timeless classic that tackles important social issues with grace and depth.",
+      "totalPages": 281,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Legal Drama", "Southern Gothic"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "id": 2,
+      "Name": "1984",
+      "author": "George Orwell",
+      "image": "https://i.ibb.co/cwKGv3Z/b2.jpg",
+      "review": "A chilling portrayal of a dystopian society, serving as a stark warning against totalitarianism.",
+      "totalPages": 328,
+      "rating": 4.8,
+      "category": "Fiction",
+      "tags": ["Dystopian", "Political Fiction"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "id": 3,
+      "Name": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/3v4BzrQ/b3.jpg",
+      "review": "A compelling exploration of the American Dream and its disillusionment.",
+      "totalPages": 180,
+      "rating": 4.7,
+      "category": "Fiction",
+      "tags": ["Classic", "Romance"],
+      "publisher": "Charles Scribner's Sons",
+      "yearOfPublishing": 1925
+    },
+    {
+      "id": 4,
+      "Name": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/g4Wrk8R/b4.jpg",
+      "review": "A raw and honest portrayal of teenage angst and alienation.",
+      "totalPages": 224,
+      "rating": 4.4,
+      "category": "Fiction",
+      "tags": ["Coming-of-age", "Bildungsroman"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "id": 5,
+      "Name": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.ibb.co/swnVwgZ/b5.jpg",
+      "review": "A delightful romance with sharp social commentary, showcasing Austen's wit and insight.",
+      "totalPages": 279,
+      "rating": 4.6,
+      "category": "Fiction",
+      "tags": ["Romance", "Satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "id": 6,
+      "Name": "Harry Potter and the Philosopher's Stone",
+      "author": "J.K. Rowling",
+      "image": "https://i.ibb.co/rsW9CPB/b6.jpg",
+      "review": "A captivating tale of magic, friendship, and adventure that appeals to readers of all ages.",
+      "totalPages": 309,
+      "rating": 4.9,
+      "category": "Fantasy",
+      "tags": ["Magic", "Children's Literature"],
+      "publisher": "Bloomsbury Publishing",
+      "yearOfPublishing": 1997
+    }
+  ]
+  
