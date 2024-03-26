@@ -8,12 +8,17 @@ import {
 import MainLayout from './layouts/MainLayout';
 import ListedBooks from './pages/ListedBooks';
 import PageToRead from './pages/PageToRead';
+import Home from './pages/Home';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
     children: [
+      {
+        path: "/",
+        element: <Home></Home>
+      },
       {
         path: "/listedBooks",
         element: <ListedBooks></ListedBooks>

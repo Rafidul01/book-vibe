@@ -11,7 +11,7 @@ const Nav = () => {
      className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] bg-none font-semibold text-lg': 'text-lg font-normal' }>Pages to Read</NavLink></li>
     </>
   return (
-    <div className="container mx-auto">
+    <div className="work-sans mt-[50px] mb-[48px]">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -45,7 +45,7 @@ const Nav = () => {
             {link}
           </ul>
         </div>
-        <div className="navbar-end gap-4 ">
+        <div className="navbar-end gap-4 hidden md:flex">
           <a className="btn bg-[#23BE0A] font-semibold text-lg text-white">Sign In</a>
           <a className="btn bg-[#59C6D2] font-semibold text-lg text-white">Sign Up</a>
         </div>
