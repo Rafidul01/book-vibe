@@ -2,8 +2,9 @@
 import { CiLocationOn } from "react-icons/ci";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { IoPeopleSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 const WantedBooks = ({book}) => {
-    const { Name, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
+    const { id, Name, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
     console.log(Name);
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl border">
@@ -50,7 +51,8 @@ const WantedBooks = ({book}) => {
         <div className="flex flex-col lg:flex-row gap-4">
           <button className="btn bg-[##328EFF26] text-[#328EFF] rounded-[30px]">Category: {category}</button>
           <button className="btn bg-[#FFAC3326] text-[#FFAC33] rounded-[30px]">Rating: {rating}</button>
-          <button className="btn bg-[#23BE0A] text-white rounded-[30px]">View Details</button>
+          <Link to={`/book/${id}`}><button className="btn bg-[#23BE0A] text-white rounded-[30px]">View Details</button></Link>
+          
         </div>
       </div>
     </div>
