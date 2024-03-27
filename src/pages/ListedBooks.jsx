@@ -42,7 +42,7 @@ const ListedBooks = () => {
         <h1>Books</h1>
       </div>
       <div className="flex items-center justify-center mt-8 mb-[56px]">
-        <select onChange={handelChange} className="select select-bordered w-full max-w-[185px] bg-[#23BE0A] text-[#FFFFFF] rounded-2xl font-semibold text-base work-sans">
+        <select onChange={handelChange} className="select select-bordered w-full max-w-[200px] bg-[#23BE0A] text-[#FFFFFF] rounded-2xl font-semibold text-base work-sans">
           <option disabled selected>
           Sort By
           </option>

@@ -23,34 +23,40 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('../public/bookData.json'),
+        errorElement: <ErrorPage></ErrorPage>,
+        loader:()=>fetch('../bookData.json'),
 
       },
       {
         path: "/listedBooks",
         element: <ListedBooks></ListedBooks>,
-        loader:()=>fetch('../public/bookData.json'),
+        errorElement: <ErrorPage></ErrorPage>,
+        loader:()=>fetch('../bookData.json'),
 
       },
       {
         path: "/pagesToRead",
         element: <PageToRead></PageToRead>,
-        loader:()=>fetch('../public/bookData.json'),
+        errorElement: <ErrorPage></ErrorPage>,
+        loader:()=>fetch('../bookData.json'),
       },
       {
         path: "/book/:id",
         element: <BookDetails></BookDetails>,
-        loader:()=>fetch('../public/bookData.json'),
+        errorElement: <ErrorPage></ErrorPage>,
+        loader:()=>fetch('../bookData.json'),
       },
       {
         path: "/author",
         element: <Authors></Authors>,
-        loader:()=>fetch('../public/bookData.json'),
+        errorElement: <ErrorPage></ErrorPage>,
+        loader:()=>fetch('../bookData.json'),
       },
       {
         path: "/onlineBooks",
         element: <OnlineBooks></OnlineBooks>,
-        loader:()=>fetch('../public/bookData.json'),
+        errorElement: <ErrorPage></ErrorPage>,
+        loader:()=>fetch('../bookData.json'),
       }
     ]
 
