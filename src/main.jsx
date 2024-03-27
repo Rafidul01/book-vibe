@@ -13,11 +13,14 @@ import BookDetails from './components/BookDetails';
 import ReadBook from './components/ReadBook';
 import WishlistBooks from './components/WishlistBooks';
 import Authors from './pages/Authors';
+import OnlineBooks from './pages/OnlineBooks';
+import ErrorPage from './components/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -54,6 +57,11 @@ const router = createBrowserRouter([
       {
         path: "/author",
         element: <Authors></Authors>,
+        loader:()=>fetch('../public/bookData.json'),
+      },
+      {
+        path: "/onlineBooks",
+        element: <OnlineBooks></OnlineBooks>,
         loader:()=>fetch('../public/bookData.json'),
       }
     ]
