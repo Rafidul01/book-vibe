@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveReadBooks, saveWishBooks } from "../utilitiy/localstrorage";
 
 const BookDetails = () => {
   const { id } = useParams();
@@ -6,7 +7,12 @@ const BookDetails = () => {
   const books = useLoaderData();
   const book = books.find((book) => book.id === idInt);
   const {Name, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
-  console.log(book);
+  const handelReadBooks = () =>{
+    saveReadBooks(idInt);
+  }
+  const handelWishBooks = () =>{
+    saveWishBooks(idInt);
+  }
   return (
     <div>
       <div className="card lg:card-side bg-base-100 shadow-xl ">
@@ -54,8 +60,8 @@ const BookDetails = () => {
           </table>
           
           <div className="card-actions">
-            <button className="btn bg-transparent border text-[#131313] work-sans">Read</button>
-            <button className="btn bg-[#50B1C9] text-white work-sans">Wishlist</button>
+            <button onClick={handelReadBooks} className="btn bg-transparent border text-[#131313] work-sans">Read</button>
+            <button onClick={handelWishBooks} className="btn bg-[#50B1C9] text-white work-sans">Wishlist</button>
           </div>
         </div>
       </div>

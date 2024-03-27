@@ -3,7 +3,8 @@ import WantedBooks from "./WantedBooks";
 const WishlistBooks = () => {
     return (
         <div>
-            <WantedBooks></WantedBooks>
+
+            {/* <WantedBooks></WantedBooks> */}
         </div>
     );
 };

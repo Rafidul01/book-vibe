@@ -20,7 +20,7 @@ const ListedBooks = () => {
       </div>
       <div>
         <div role="tablist" className="tabs tabs-lifted flex justify-start mb-4">
-          <Link onClick={()=>setTabIdx(0)}  role="tab" to={`readBooks`} className= {`tab font-normal text-base ${tabIdx === 0 ? 'tab-active text-[#131313CC]' : 'text-[#13131380]'} `} >
+          <Link onClick={()=>setTabIdx(0)}  role="tab" to={`/listedBooks/readBooks`} className= {`tab font-normal text-base ${tabIdx === 0 ? 'tab-active text-[#131313CC]' : 'text-[#13131380]'} `} >
           Read Books
           </Link>
           <Link onClick={()=>setTabIdx(1)}  role="tab" to={`wishlistBooks`} className= {`tab font-normal text-base w-[90] ${tabIdx === 1 ? 'tab-active text-[#131313CC]' : 'text-[#13131380]'} `} >
