@@ -1,15 +1,21 @@
 import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
+import {  saveShortData } from "../utilitiy/localstrorage";
 
 const ListedBooks = () => {
+    
     const [tabIdx, setTabIdx] = useState(0);
+    saveShortData('Rating');
+    const handelChange = (e) =>{
+      saveShortData(e.target.value);
+    }
   return (
     <div>
       <div className="text-[#131313] font-bold h-[100px] text-center bg-[#1313130D] rounded-[16px] flex items-center justify-center work-sans text-[28px]">
         <h1>Books</h1>
       </div>
       <div className="flex items-center justify-center mt-8 mb-[56px]">
-        <select className="select select-bordered w-full max-w-[185px] bg-[#23BE0A] text-[#FFFFFF] rounded-2xl font-semibold text-base work-sans">
+        <select onChange={handelChange} className="select select-bordered w-full max-w-[185px] bg-[#23BE0A] text-[#FFFFFF] rounded-2xl font-semibold text-base work-sans">
           <option disabled selected>
             Sort By
           </option>

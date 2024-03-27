@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getStoredReadBooks } from "../utilitiy/localstrorage";
 
 const ReadBook = () => {
+    // const sortvalue = getStoredSortData(); 
     const books = useLoaderData();
     const [readBook, setReadBook] = useState([])
     useEffect(()=>{
@@ -20,7 +21,11 @@ const ReadBook = () => {
             setReadBook(readdedBooks);
             
         }
-    },[])
+    }, [])
+    // useEffect(()=>{
+    //     const finalData = [...readBook];
+    //     console.log(finalData);
+    // }, [sortvalue.length])
     return (
         <div className="space-y-4">
             {

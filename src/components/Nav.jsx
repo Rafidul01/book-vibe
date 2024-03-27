@@ -9,6 +9,8 @@ const Nav = () => {
      className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] bg-none font-semibold text-lg': 'text-lg font-normal' }>Listed Books</NavLink></li>
     <li><NavLink to="/pagesToRead"
      className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] bg-none font-semibold text-lg': 'text-lg font-normal' }>Pages to Read</NavLink></li>
+    <li><NavLink to="/author"
+     className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] bg-none font-semibold text-lg': 'text-lg font-normal' }>Authors</NavLink></li>
     </>
   return (
     <div className="work-sans mt-[50px] mb-[48px]">

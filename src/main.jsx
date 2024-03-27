@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import BookDetails from './components/BookDetails';
 import ReadBook from './components/ReadBook';
 import WishlistBooks from './components/WishlistBooks';
+import Authors from './pages/Authors';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: "/book/:id",
         element: <BookDetails></BookDetails>,
+        loader:()=>fetch('../public/bookData.json'),
+      },
+      {
+        path: "/author",
+        element: <Authors></Authors>,
         loader:()=>fetch('../public/bookData.json'),
       }
     ]
