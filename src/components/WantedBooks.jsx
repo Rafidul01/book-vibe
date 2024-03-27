@@ -5,7 +5,6 @@ import { IoPeopleSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 const WantedBooks = ({book}) => {
     const { id, Name, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
-    console.log(Name);
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl border">
       <figure className="p-6">

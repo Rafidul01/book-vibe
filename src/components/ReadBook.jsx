@@ -1,11 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+/* eslint-disable react/prop-types */
+
 import WantedBooks from "./WantedBooks";
 import { useEffect, useState } from "react";
 import { getStoredReadBooks } from "../utilitiy/localstrorage";
 
-const ReadBook = () => {
+const ReadBook = ({books, srt}) => {
     // const sortvalue = getStoredSortData(); 
-    const books = useLoaderData();
+    // console.log(srt , books);    
     const [readBook, setReadBook] = useState([])
     useEffect(()=>{
         const storedBookId = getStoredReadBooks();
@@ -18,10 +19,19 @@ const ReadBook = () => {
                 }
 
             }
+            if(srt === 0) readdedBooks.sort((a,b) => b.rating-a.rating);
+            else if(srt === 1){
+                readdedBooks.sort((a,b) => b.totalPages-a.totalPages);
+            }
+            else if(srt === 2){
+                readdedBooks.sort((a,b) => b.yearOfPublishing-a.yearOfPublishing);
+            }
             setReadBook(readdedBooks);
+            // console.log(readBook);
             
         }
-    }, [])
+    }, [srt])
+    
     // useEffect(()=>{
     //     const finalData = [...readBook];
     //     console.log(finalData);

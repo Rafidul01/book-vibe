@@ -5,7 +5,7 @@ const Nav = () => {
     <li><NavLink to="/"
      className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] bg-none font-semibold text-lg ': 'text-lg font-normal' }   
     >Home</NavLink></li>
-    <li><NavLink to="/listedBooks/readBooks"
+    <li><NavLink to="/listedBooks"
      className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] bg-none font-semibold text-lg': 'text-lg font-normal' }>Listed Books</NavLink></li>
     <li><NavLink to="/pagesToRead"
      className={({isActive})=> isActive? 'text-[#23BE0A] border border-[#23BE0A] bg-none font-semibold text-lg': 'text-lg font-normal' }>Pages to Read</NavLink></li>
