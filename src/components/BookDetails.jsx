@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveReadBooks, saveWishBooks } from "../utilitiy/localstrorage";
+import { getStoredReadBooks, getStoredWishBooks, saveReadBooks, saveWishBooks } from "../utilitiy/localstrorage";
+import { toast } from "react-toastify";
 
 const BookDetails = () => {
   const { id } = useParams();
@@ -8,10 +9,35 @@ const BookDetails = () => {
   const book = books.find((book) => book.id === idInt);
   const {Name, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
   const handelReadBooks = () =>{
-    saveReadBooks(idInt);
+    
+    const storedBookId = getStoredReadBooks();
+    const exist = storedBookId.find(sid => sid === idInt)
+    if(!exist){
+      toast.success("Successfully Added!");
+      saveReadBooks(idInt);
+    }
+    else{
+      toast.warn("Book Already Exist!");
+    }
+    console.log(storedBookId);
+    
   }
   const handelWishBooks = () =>{
-    saveWishBooks(idInt);
+    
+    const storedBookId = getStoredReadBooks();
+    const storedwishBookId = getStoredWishBooks();
+    const exist = storedBookId.find(sid => sid === idInt)
+    const exist2 = storedwishBookId.find(sid => sid === idInt)
+    if(!exist && !exist2){
+      toast.success("Successfully Added!");
+      saveWishBooks(idInt);
+    }
+    else if(exist){
+      toast.warn("Already read this book!");
+    }
+    else{
+      toast.warn("Book Already Exist!");
+    }
   }
   return (
     <div>

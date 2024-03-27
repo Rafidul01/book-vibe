@@ -21,7 +21,7 @@ const WantedBooks = ({book}) => {
         <p className="text-[#131313CC] work-sans font-medium text-base">
           By : {author}
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col lg:flex-row items-center gap-4">
           <h1 className="text-[#131313] font-medium text-xl work-sans ">
             Tag{" "}
             
